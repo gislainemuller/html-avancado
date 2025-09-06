@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #940418, #aa1919);
+    color: #eb3a43;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: rgba(20, 20, 20, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(236, 1, 41, 0.795);
+    box-shadow: 0 0 25px rgba(204, 3, 3, 0.555);
+    
+}
+
+h1, h2{
+    text-align: center;
+    color: #db173886;
+    text-shadow: 0 0 10px #940418, 0 0 20px #aa1919;
+    
+}
+h1{
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+h2{
+    margin-top: 40px;
+    font-size: 1.8rem;
+}
+p, ul{
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #ddd;
+}
+img{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: 2px solid rgba(204, 3, 3, 0.555);
+    box-shadow: 0 0 15px rgba(236, 1, 41, 0.795);
+    transition: clip-path 0.5s ease-in-out, transform 0.3s ease;
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(248, 45, 45, 0.973);
+
+    }
+}
+img.polygon {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    &:hover {
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+    
+}
+img.circle{
+    clip-path: circle(10% at 50% 50%);
+
+    &:hover{
+        clip-path: circle(50% at 50% 50%);
+    }
+}
+img.ellipse {
+    clip-path: ellipse(10% 10% at 50% 50%);
+    &:hover{
+        clip-path: ellipse(50% 50% at 50% 50%)
+    }
+}
+img.inset{
+    clip-path: inset(0);
+     
+    &:hover{
+        clip-path: inset(20%);
+    }
+}
